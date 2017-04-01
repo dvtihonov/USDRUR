@@ -1,4 +1,5 @@
 // USDRUR project main.go
+
 package main
 
 import (
@@ -30,8 +31,6 @@ func Scan2() string {
 }
 
 func main() {
-	//KURS, err := strconv.ParseInt(Scan1(), 10, 64)
-	//USD, err := strconv.ParseInt(Scan2(), 10, 64)
 
 	scan1 := Scan1()
 	KURS, err := strconv.ParseInt(scan1, 10, 64)
