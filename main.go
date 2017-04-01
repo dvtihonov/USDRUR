@@ -30,8 +30,25 @@ func Scan2() string {
 }
 
 func main() {
-	KURS, _ := strconv.ParseInt(Scan1(), 10, 64)
-	USD, _ := strconv.ParseInt(Scan2(), 10, 64)
+	//KURS, err := strconv.ParseInt(Scan1(), 10, 64)
+	//USD, err := strconv.ParseInt(Scan2(), 10, 64)
+
+	scan1 := Scan1()
+	KURS, err := strconv.ParseInt(scan1, 10, 64)
+	fmt.Println("Введен актуальный курс USD: ", scan1)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Ошибка! Чувак ты мне хрень написал, а не число - ", scan1)
+		return
+	}
+
+	scan2 := Scan2()
+	USD, err := strconv.ParseInt(scan2, 10, 64)
+	fmt.Println("Введено колличество USD: ", scan2)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Ошибка! Чувак ты мне хрень написал, а не число - ", scan2)
+		return
+	}
+
 	var RUR int64
 	RUR = KURS * USD
 	fmt.Println("Колличество в рублях : ", RUR)
