@@ -48,8 +48,7 @@ func main() {
 		return
 	}
 
-	var RUR int64
-	RUR = KURS * USD
+	var RUR int64 = KURS * USD
 	fmt.Println("Колличество в рублях : ", RUR)
 
 	//duration := time.Duration(15) * time.Second
