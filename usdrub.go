@@ -36,7 +36,7 @@ func main() {
 	KURS, err := strconv.ParseInt(scan1, 10, 64)
 	fmt.Println("Введен актуальный курс USD: ", scan1)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "Ошибка! Чувак ты мне хрень написал, а не число - ", scan1)
+		fmt.Fprintln(os.Stderr, "Ошибка! Чувак ты мне хрень написал, должно быть число - ", scan1)
 		return
 	}
 
